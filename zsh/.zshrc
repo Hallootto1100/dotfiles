@@ -76,3 +76,9 @@ alias ls='ls --color'
 
 # Load completions
 autoload -U compinit && compinit
+
+# Exporting variables
+export PATH="/home/armin/.local/bin:$PATH"
+export EDITOR=nvim
+export VISUAL=nvim
+export SUDO_EDITOR=nvim
