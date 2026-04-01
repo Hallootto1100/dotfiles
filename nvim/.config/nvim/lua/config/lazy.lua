@@ -40,6 +40,15 @@ vim.diagnostic.config({ virtual_text = true })
 -- vim.lsp.config('clangd', {
 -- root_markers = { ".clangd" }
 -- })
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
+})
 
 -- Setup lazy.nvim
 require("lazy").setup({

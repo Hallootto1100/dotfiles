@@ -1,30 +1,30 @@
 return {
-  "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    "nvim-treesitter/nvim-treesitter-textobjects",
-  },
-  build = ":TSUpdate",
-  config = function()
-    local configs = require("nvim-treesitter.configs")
-    configs.setup({
-      auto_install = true,
-      sync_install = false,
-      highlight = { enable = true },
-      indent = { enable = true },
+	"nvim-treesitter/nvim-treesitter",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter-textobjects",
+	},
+	build = ":TSUpdate",
+	config = function()
+		local configs = require("nvim-treesitter.configs")
+		configs.setup({
+			auto_install = true,
+			sync_install = false,
+			highlight = { enable = true },
+			indent = { enable = true },
 
-      textobjects = {
-        select = {
-          enable = true,
-          lookahead = true,
-          keymaps = {
-            ["af"] = "@function.outer",
-            ["if"] = "@function.inner",
-            ["as"] = "@statement.outer",
-            ["ic"] = "@comment.inner",
-            ["ac"] = "@comment.outer",
-          }
-        },
-      },
-    })
-  end,
+			textobjects = {
+				select = {
+					enable = true,
+					lookahead = true,
+					keymaps = {
+						["af"] = "@function.outer",
+						["if"] = "@function.inner",
+						["as"] = "@statement.outer",
+						["ic"] = "@comment.inner",
+						["ac"] = "@comment.outer",
+					},
+				},
+			},
+		})
+	end,
 }
