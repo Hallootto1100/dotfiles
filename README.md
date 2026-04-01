@@ -4,8 +4,11 @@ Personal configuration files for various development tools.
 
 ## Contents
 
+- **hypr** - Hyprland (Wayland compositor) configuration
 - **kitty** - Terminal emulator configuration
+- **nvim** - Neovim configuration
 - **tmux** - Terminal multiplexer configuration
+- **waybar** - Wayland status bar configuration
 - **zsh** - Z shell configuration
 
 ## Installation
@@ -19,7 +22,7 @@ sudo apt install stow
 
 Install the managed tools:
 ```bash
-sudo apt install kitty tmux zsh
+sudo apt install hyprland kitty neovim tmux waybar zsh
 ```
 
 Note: install a proper emoji fallback font as well (for example `fonts-noto-color-emoji`) so emoji render correctly in the terminal.
@@ -49,9 +52,7 @@ cd ~/.dotfiles
 
 3. Apply configurations using stow:
 ```bash
-stow kitty
-stow tmux
-stow zsh
+stow hypr kitty nvim tmux waybar zsh
 ```
 
 4. Start tmux and install the configured plugins with `prefix + I` (`prefix` is usually `Ctrl-b`):
@@ -72,3 +73,6 @@ The ZSH configuration requires `fzf` (fuzzy finder):
 ```bash
 sudo apt install fzf
 ```
+
+### Neovim
+The Neovim configuration uses lazy.nvim for plugin management. Plugins are automatically installed on first launch.
