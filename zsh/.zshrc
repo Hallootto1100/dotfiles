@@ -73,7 +73,7 @@ zstyle ':completion:*' menu no
 alias ls='ls --color'
 
 # Shell integrations
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh >/dev/null 2>&1
 
 # Load completions
 autoload -U compinit && compinit
@@ -85,7 +85,7 @@ export VISUAL=nvim
 export SUDO_EDITOR=nvim
 
 # Enable the rust environment
-. "$HOME/.cargo/env"
+. "$HOME/.cargo/env" >/dev/null 2>&1
 
 # opencode
 export PATH=/home/armin/.opencode/bin:$PATH
